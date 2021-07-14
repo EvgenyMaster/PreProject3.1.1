@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Создать пользователя</title>
+</head>
+<body>
+
+<form action="/logout" method="POST">
+    <button>logout</button>
+</form>
+
+<br>
+<br>
+<form action="/admin">
+    <button>Страница админа</button>
+</form>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+
+    <h4>Создать нового пользователя:</h4>
+    <form accept-charset="UTF-8" action="/admin/create" th:method="POST" th:object="${new_user}">
+        <input autofocus type="text" th:field="*{login}" required placeholder="login">
+        <br>
+        <input type="text" th:field="*{password}" required placeholder="password">
+        <br>
+        <br>
+        <input type="text" name="new_user_roles" required placeholder="roles (admin, user, ... )">
+        <br>
+        <br>
+        <input type="text" th:field="*{name}" placeholder=" name">
+        <br>
+        <input type="text" th:field="*{email}" placeholder="email">
+        <br>
+        <input type="submit" value="Создать"/>
+    </form>
+
+</center>
+</body>
+</html>

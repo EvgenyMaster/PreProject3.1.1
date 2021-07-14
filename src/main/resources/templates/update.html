@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменить пользователя</title>
+</head>
+<body>
+
+<form action="/logout" method="POST">
+    <button>logout</button>
+</form>
+
+<br>
+<br>
+<form action="/admin">
+    <button>Страница админа</button>
+</form>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+
+    <h4>Изменить пользователя по ID и нескольким полям:</h4>
+    <form accept-charset="UTF-8" action="/admin/update" th:method="PATCH">
+        <input autofocus type="text" name="update_id" required placeholder="id">
+        <br>
+        <br>
+        <input type="text" name="update_log" placeholder="login">
+        <br>
+        <input type="text" name="update_pas" placeholder="password">
+        <br>
+        <input type="text" name="update_rol" placeholder="roles">
+        <br>
+        <br>
+        <input type="text" name="update_n" placeholder="name">
+        <br>
+        <input type="text" name="update_em" placeholder="email">
+        <br>
+        <input type="submit" value="Изменить">
+    </form>
+
+</center>
+</body>
+</html>

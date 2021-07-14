@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Удалить пользователя</title>
+</head>
+<body>
+
+<form action="/logout" method="POST">
+    <button>logout</button>
+</form>
+
+<br>
+<br>
+<form action="/admin">
+    <button>Страница админа</button>
+</form>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+
+    <h4>Удалить пользователя по ID:</h4>
+    <form action="/admin/delete" th:method="DELETE">
+        <input autofocus type="text" name="delete_id" required placeholder="id">
+        <br>
+        <br>
+        <input type="submit" value="Удалить">
+    </form>
+
+</center>
+</body>
+</html>
